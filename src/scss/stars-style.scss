@@ -1,0 +1,169 @@
+
+// RESPONSIVE
+// html, body {
+//   height: 100%!important;
+// }
+// body {
+//   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+//   overflow: hidden
+// }
+// span {
+//   background: -webkit-linear-gradient(white, rgba(200,200,200, 0.8));
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+// /* Keyframes */
+// @keyframes parallax {
+// 	from {
+// 		transform: translateY(0)
+// 	}
+// 	to {
+// 		transform: translateY(-100vh);
+// 	}
+// }
+// @function multiple-box-shadows($stars, $size, $color){
+// 	$box-shadow: random(100)+'vw ' + random(100)+'vh ' + $color;
+// 	@for $i from 1 through $stars {
+// 		 $box-shadow: $box-shadow + ', ' + random(100)+'vw ' + random(100)+'vh ' + $color;
+// 	}
+// 	@return unquote($box-shadow);
+// }
+// @mixin parallax-layer($stars, $size: 1px, $timer: 25s, $color: white, $easing: linear){
+// 	$shadows: multiple-box-shadows($stars, $size, $color);
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: $size;
+// 	height: $size;
+// 	background: transparent;
+// 	pointer-events: none;
+// 	box-shadow: $shadows;
+// 	animation: parallax $timer $easing infinite;
+//   border-radius: 50%;
+// 	&:after {
+// 		content: " ";
+// 		position: absolute;
+// 		width: $size;
+// 		height: $size;
+// 		top: 100vh;
+// 		box-shadow: $shadows;
+//     border-radius: 50%;
+// 	}
+// }
+// .stars {
+// 	@include parallax-layer(700, 1px, 25s, lightblue);
+// }
+// .stars2 {
+// 	@include parallax-layer(200, 3px, 50s, green);
+// }
+// .stars3 {
+// 	@include parallax-layer(100, 5px, 100s, darkred);
+// }
+
+// NOT RESPONSIVE
+// @function random-color() {
+//   $value: "black";
+//   @if random(5) == 1 {
+//    $value: "#DAF7A6";
+//   }
+//   @else if random(5) == 2{
+//     $value: "#FFC300";
+//   }
+//   @else if random(5) == 3{
+//     $value: "#FF5733";
+//   }
+//   @else if random(5) == 4{
+//     $value: "#82E0AA";
+//   }
+//   @else {
+//     $value: "#85C1E9";
+//   }
+//   @return unquote($value);
+// }
+
+// // n is number of stars required
+// @function multiple-box-shadow($n) {
+//   $value: "#{random(2000)}px #{random(2000)}px #{random-color()}";
+
+//   @for $i from 2 through $n {
+//     $value: "#{$value} , #{random(2000)}px #{random(2000)}px #{random-color()}";
+//   }
+
+//   @return unquote($value);
+// }
+
+// $shadows-small: multiple-box-shadow(700);
+// $shadows-medium: multiple-box-shadow(200);
+// $shadows-big: multiple-box-shadow(100);
+
+
+//   .stars {
+//     width: 2px;
+//     height: 2px;
+//     border-radius: 50%;
+//     background: transparent;
+//     box-shadow: $shadows-small;
+//     animation: animStar 150s linear infinite;
+  
+//     &:after {
+//       content: " ";
+//       position: absolute;
+//       top: 2000px;
+//       width: 2px;
+//       height: 2px;
+//       border-radius: 50%;
+//       background: transparent;
+//       box-shadow: $shadows-small;
+//     }
+//   }
+  
+//   .stars2 {
+//     width: 3px;
+//     height: 3px;
+//     border-radius: 50%;
+//     background: transparent;
+//     box-shadow: $shadows-medium;
+//     animation: animStar 100s linear infinite;
+  
+//     &:after {
+//       content: " ";
+//       position: absolute;
+//       top: 2000px;
+//       width: 3px;
+//       height: 3px;
+//       border-radius: 50%;
+//       background: transparent;
+//       box-shadow: $shadows-medium;
+//     }
+
+  
+//   .stars3 {
+//     width: 4px;
+//     height: 4px;
+//     border-radius: 50%;
+//     background: transparent;
+//     box-shadow: $shadows-big;
+//     animation: animStar 50s linear infinite;
+  
+//     &:after {
+//       content: " ";
+//       position: absolute;
+//       top: 2000px;
+//       width: 4px;
+//       height: 4px;
+//       border-radius: 50%;
+//       background: transparent;
+//       box-shadow: $shadows-big;
+//     }
+//   }
+  
+//   @keyframes animStar {
+//     from {
+//       transform: translateY(0);
+//     }
+  
+//     to {
+//       transform: translateY(-100vh);
+//     }
+//   }
+// }
