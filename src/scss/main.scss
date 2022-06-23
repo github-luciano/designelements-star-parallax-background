@@ -1,12 +1,11 @@
 
 
 html, body {
-  height: 100%!important;
+  min-height: 100%!important;
 }
 
 body {
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  overflow: hidden
 }
 
 // Keyframes
@@ -51,10 +50,6 @@ body {
   }
 }
 
-@function starsDensity($constant) {
-  $density: 100 * 2;
-  @return $density;
-}
 // optimal view is 200 for a window width of 1920px
 .stars {
   @include parallax-layer(200, 1px, 25s, white)
